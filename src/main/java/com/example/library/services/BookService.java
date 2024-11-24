@@ -75,6 +75,7 @@ public class BookService {
         bookDTO.setCover(book.getCover());
         bookDTO.setPrice(book.getPrice());
         bookDTO.setCategory(book.getCategory());
+        bookDTO.setReserved(book.isReserved());
         return bookDTO;
     }
 
@@ -85,6 +86,7 @@ public class BookService {
         book.setCategory(bookDTO.getCategory());
         book.setPrice(bookDTO.getPrice());
         book.setCover(bookDTO.getCover());
+        book.setReserved(bookDTO.isReserved());
         return book;
     }
 
