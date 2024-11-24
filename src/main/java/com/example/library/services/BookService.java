@@ -61,8 +61,8 @@ public class BookService {
         return convertToDto(updatedBook);
     }
 
-    public List<BookDTO> getBooksByTitle(String title) {
-        List<Book> books = bookRepository.findByTitleContainingIgnoreCase(title);
+    public List<BookDTO> getBooksByCategory(String title) {
+        List<Book> books = bookRepository.findByCategoryContainingIgnoreCase(title);
         return books.stream().map(this::convertToDto).toList();
     }
 

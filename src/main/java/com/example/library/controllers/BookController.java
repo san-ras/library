@@ -48,8 +48,8 @@ public class BookController {
     }
 
     @GetMapping("/search")
-    public ResponseEntity<List<BookDTO>> getBooksByTitle(@RequestParam String title) {
-        List<BookDTO> books = bookService.getBooksByTitle(title);
+    public ResponseEntity<List<BookDTO>> getBooksByCategory(@RequestParam String title) {
+        List<BookDTO> books = bookService.getBooksByCategory(title);
         return new ResponseEntity<>(books, HttpStatus.OK);
     }
 
